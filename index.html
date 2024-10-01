@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="img/favcon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nextgencode</title>
+</head>
+
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <button class="menu-toggle">☰</button> <!-- Botão do menu -->
+        <img src="img/favcon.jpg" alt="Logo" class="logo">
+        <h1>Nextgencode</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#exemplos">Vitrine</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home-sobre" class="side-by-side">
+        <div id="home" class="hero">
+            <div class="container">
+                <h2>Bem-vindo à Nextgencode</h2>
+                <p>O futuro da sua empresa começa agora.</p>
+            </div>
+        </div>
+
+        <!-- Sobre Nós Section -->
+        <div id="sobre" class="about">
+            <div class="container">
+                <h2>A Nextgencode</h2>
+                <p>Somos uma empresa de programação especializada em criar soluções tecnológicas personalizadas para atender às necessidades do seu negócio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Criamos sites profissionais e responsivos para empresas.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Consultoria Tech</h3>
+                    <p>Oferecemos suporte técnico e consultoria em tecnologia.</p>
+                </div>
+                <div class="service-item">
+                    <h3>SEO Avançado</h3>
+                    <p>Melhoramos sua visibilidade nas buscas e otimizamos seu site.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Serviços Personalizados</h3>
+                    <p>Desenvolvemos soluções sob medida para atender às necessidades exclusivas do seu negócio.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Administração de Sites</h3>
+                    <p>Gerenciamos seu site, mantendo-o atualizado, seguro e eficiente.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Manutenção e Suporte</h3>
+                    <p>Oferecemos manutenção contínua para garantir que seu site funcione sem problemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exemplos Section (Vitrine de Projetos) -->
+    <section id="exemplos" class="portfolio">
+        <div class="container">
+            <h2>Vitrine</h2>
+            <div class="portfolio-list">
+                <div class="portfolio-item" data-info="E-commerce voltado para vendas online com otimizações de SEO.">
+                    <img src="img/exemplo1.webp" alt="Exemplo 1">
+                    <p>E-commerce</p>
+                </div>
+                <div class="portfolio-item" data-info="Landing Page moderna para capturar leads e maximizar conversões.">
+                    <img src="img/exemplo2.webp" alt="Exemplo 2">
+                    <p>Landing Page</p>
+                </div>
+                <div class="portfolio-item" data-info="Hotsite criado para campanhas promocionais e eventos especiais.">
+                    <img src="img/exemplo3.jpg" alt="Exemplo 3">
+                    <p>Hotsite</p>
+                </div>
+            </div>
+
+            <!-- Área de informações sobre os exemplos -->
+            <div id="info-exemplos" class="info-exemplos hidden">
+                <h3>Informações sobre o exemplo</h3>
+                <p id="info-text">Clique em um exemplo para ver mais detalhes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orçamento Section -->
+    <section id="orcamento" class="quote">
+        <div class="container">
+            <h2>Solicite um Orçamento</h2>
+            <form id="seuFormulario" onsubmit="sendEmail(event)">
+                <input type="text" id="name" placeholder="Seu Nome" required />
+                <input type="email" id="email" placeholder="Seu E-mail" required />
+                <textarea id="details" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="response-message" class="hidden"></p>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:nextgencode32@gmail.com">nextgencode32@gmail.com</a></li>
+                <li><i class="fas fa-phone"></i> Telefone: (46) 999022426</li>
+                <li><i class="fas fa-map-marker-alt"></i> Endereço: Ampere PR</li>
+            </ul>
+            <div class="social-icons">
+                <a href="mailto:nextgencode32@gmail.com" target="_blank" aria-label="Enviar email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/5546999022426" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nextgencode. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+</body>
+
+</html>

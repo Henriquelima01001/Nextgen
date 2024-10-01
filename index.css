@@ -1,0 +1,331 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+    background-color: #f3f4f6;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(143, 143, 143, 0.735)),
+    url('') no-repeat center center/cover;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    width: 100px;
+    height: auto; 
+    border-radius: 40%;
+    opacity: 1; /* Opacidade padrão */
+}
+
+/* Botão do menu */
+.menu-toggle {
+    display: none; /* Oculta por padrão */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #000; /* Cor do botão */
+    position: absolute;
+    top: 20px; /* Ajuste conforme necessário */
+    left: 20px; /* Ajuste conforme necessário */
+}
+
+/* Estilos de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* Navegação - Links */
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(67, 67, 67, 0.58);  
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom right, rgba(0, 51, 102, 0.7), rgba(0, 119, 107, 0.7)),
+    url('img/background.webp') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* About Section */
+.about {
+    background-color: #e0f7fa;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    color: #006064;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Services Section */
+.service-list, .portfolio-list, .client-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item, .portfolio-item, .client-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    width: calc(33.33% - 20px); /* Ajuste para 3 itens lado a lado */
+}
+
+.service-item img, .portfolio-item img, .client-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.service-item h3, .portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #006064;
+}
+
+.service-item p, .portfolio-item p, .client-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.service-item:hover, .portfolio-item:hover, .client-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Client Section */
+.client-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Quote Section */
+.quote {
+    background-color: #fafafa;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.quote h2 {
+    font-size: 2rem;
+    color: #006064;
+    margin-bottom: 20px;
+}
+
+.quote form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quote input, .quote textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.quote button {
+    padding: 12px;
+    background-color: #006064;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.quote button:hover {
+    background-color: #00796b;
+}
+
+#response-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #006064;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #e0f7fa;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #006064;
+    margin-bottom: 20px;
+}
+
+.contact ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.contact ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact ul li i {
+    margin-right: 10px;
+    color: #0019fc;
+}
+
+.social-icons a {
+    text-decoration: none; 
+    color: inherit; 
+    margin: 0 10px; 
+}
+
+.social-icons a:hover {
+    color: #00796b;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão do menu em visualizações responsivas */
+    }
+   
+
+/* Responsividade para ocultar a logo */
+@media (max-width: 768px) {
+    .logo {
+        display: none; /* Oculta a logo em visualizações responsivas */
+    }
+}
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        background-color: #00796b; /* Cor de fundo do menu */
+        padding: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none; /* Esconde o menu por padrão em visualizações responsivas */
+    }
+
+    nav ul.active {
+        display: flex; /* Mostra o menu quando a classe 'active' é adicionada */
+    }
+
+    nav ul li a {
+        color: #fff; /* Cor dos links no menu responsivo */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Tamanho do texto do título na seção hero em telas pequenas */
+    }
+
+    .service-list, .portfolio-list, .client-list {
+        flex-direction: column; /* Exibe os itens em coluna em telas pequenas */
+    }
+
+    .service-item, .portfolio-item, .client-item {
+        width: 100%; /* Cada item ocupa a largura total em telas pequenas */
+    }
+}
