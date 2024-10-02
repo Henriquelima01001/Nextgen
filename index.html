@@ -13,7 +13,7 @@
 <body>
     <!-- Header and Navigation -->
     <header>
-        <button class="menu-toggle">☰</button> <!-- Botão do menu -->
+        <button class="menu-toggle">☰</button>
         <img src="img/favcon.jpg" alt="Logo" class="logo">
         <h1>Nextgencode</h1>
         <nav>
@@ -85,22 +85,16 @@
             <div class="portfolio-list">
                 <div class="portfolio-item" data-info="E-commerce voltado para vendas online com otimizações de SEO.">
                     <img src="img/exemplo1.webp" alt="Exemplo 1">
-                    <p>E-commerce</p>
+                    <div class="info-overlay">E-commerce voltado para vendas online com otimizações de SEO.</div>
                 </div>
                 <div class="portfolio-item" data-info="Landing Page moderna para capturar leads e maximizar conversões.">
                     <img src="img/exemplo2.webp" alt="Exemplo 2">
-                    <p>Landing Page</p>
+                    <div class="info-overlay">Landing Page moderna para capturar leads e maximizar conversões.</div>
                 </div>
                 <div class="portfolio-item" data-info="Hotsite criado para campanhas promocionais e eventos especiais.">
                     <img src="img/exemplo3.jpg" alt="Exemplo 3">
-                    <p>Hotsite</p>
+                    <div class="info-overlay">Hotsite criado para campanhas promocionais e eventos especiais.</div>
                 </div>
-            </div>
-
-            <!-- Área de informações sobre os exemplos -->
-            <div id="info-exemplos" class="info-exemplos hidden">
-                <h3>Informações sobre o exemplo</h3>
-                <p id="info-text">Clique em um exemplo para ver mais detalhes.</p>
             </div>
         </div>
     </section>
@@ -110,11 +104,13 @@
         <div class="container">
             <h2>Solicite um Orçamento</h2>
             <form id="seuFormulario" onsubmit="sendEmail(event)">
-                <input type="text" id="name" placeholder="Seu Nome" required />
-                <input type="email" id="email" placeholder="Seu E-mail" required />
-                <textarea id="details" placeholder="Sua Mensagem" required></textarea>
+                <input type="text" id="name" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu Email" required>
+                <textarea id="details" placeholder="Detalhes do Orçamento" required></textarea>
                 <button type="submit">Enviar</button>
             </form>
+            <div id="response-message" class="hidden"></div>
+            
             <p id="response-message" class="hidden"></p>
         </div>
     </section>
@@ -150,7 +146,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="index.js"></script>
+    <script src="index.js" defer></script> <!-- Certifique-se de que o caminho está correto -->
+
 </body>
 
 </html>

@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Middleware para servir arquivos estáticos (HTML, CSS, JS do front-end)
 app.use(express.static(path.join(__dirname, 'nextgen'))); // Garantindo que o caminho está correto
@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'nextgen'))); // Garantindo que o ca
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());  // Necessário para processar JSON
 
-// Rota para processar o formulário de orçamento
+// Rota para processar o formuário de orçamento
 app.post('/send-email', (req, res) => {
   const { name, email, details } = req.body;
 
@@ -51,3 +51,4 @@ app.post('/send-email', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
+

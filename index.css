@@ -22,9 +22,9 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(143, 143, 143, 0.735)),
-    url('') no-repeat center center/cover;
-    color: #000000;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(143, 143, 143, 0.735)), 
+                url('') no-repeat center center/cover;
+    color: #000;
     padding: 20px 0;
     text-align: center;
     position: relative;
@@ -36,7 +36,6 @@ header h1 {
     font-weight: 700;
 }
 
-/* Logo */
 .logo {
     position: absolute;
     top: 15px;
@@ -47,20 +46,19 @@ header h1 {
     opacity: 1; /* Opacidade padrão */
 }
 
-/* Botão do menu */
 .menu-toggle {
     display: none; /* Oculta por padrão */
     background: none;
     border: none;
     font-size: 1.8rem;
     cursor: pointer;
-    color: #000; /* Cor do botão */
+    color: #000;
     position: absolute;
-    top: 20px; /* Ajuste conforme necessário */
-    left: 20px; /* Ajuste conforme necessário */
+    top: 20px;
+    left: 20px;
 }
 
-/* Estilos de navegação */
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -73,9 +71,8 @@ nav ul {
     gap: 15px;
 }
 
-/* Navegação - Links */
 nav ul li a {
-    color: #000000;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -85,13 +82,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(67, 67, 67, 0.58);  
+    background-color: rgba(67, 67, 67, 0.58);
 }
 
 /* Hero Section */
 .hero {
     background: linear-gradient(to bottom right, rgba(0, 51, 102, 0.7), rgba(0, 119, 107, 0.7)),
-    url('img/background.webp') no-repeat center center/cover;
+                url('img/background.webp') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -133,7 +130,7 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* Services Section */
+/* Service and Portfolio Sections */
 .service-list, .portfolio-list, .client-list {
     display: flex;
     justify-content: space-between;
@@ -172,12 +169,37 @@ nav ul li a:hover {
     transform: translateY(-10px);
 }
 
-/* Client Section */
-.client-list {
+.portfolio-item {
+    position: relative; /* Garante que o overlay seja posicionado em relação à imagem */
+    display: inline-block;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    color: rgb(223, 223, 223);
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.1s ease-in-out;
+    padding: 10px;
+}
+
+.portfolio-item.active .info-overlay {
+    opacity: 1; /* Mostra a informação quando a classe 'active' é adicionada */
 }
 
 /* Quote Section */
@@ -227,6 +249,10 @@ nav ul li a:hover {
     margin-top: 15px;
     font-weight: bold;
     color: #006064;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Contact Section */
@@ -287,20 +313,15 @@ footer p {
     .menu-toggle {
         display: block; /* Mostra o botão do menu em visualizações responsivas */
     }
-   
 
-/* Responsividade para ocultar a logo */
-@media (max-width: 768px) {
     .logo {
         display: none; /* Oculta a logo em visualizações responsivas */
     }
-}
-
 
     nav ul {
         flex-direction: column;
         gap: 10px;
-        background-color: #00796b; /* Cor de fundo do menu */
+        background-color: #00796b;
         padding: 20px;
         position: absolute;
         top: 100%;
